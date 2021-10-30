@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(245, 245, 245);
+  }
+  
+.content-section {
+    background: #fff;
+    margin: 40px;
+    padding: 1.5rem 1.5rem;
+    border-radius: 10px;
+}
