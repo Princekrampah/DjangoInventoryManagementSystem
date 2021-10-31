@@ -1,0 +1,49 @@
+{% extends '../layout.html' %}
+{% block content %}
+  
+  <div class="content-section">     
+    <div class="row mx-auto justify-content-center">
+
+      <div class="card m-4" style="width: 90%">
+        <div class="card-body">
+          <div id="chart1"></div>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 90%">
+        <div class="card-body">
+          <div id="chart2"></div>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 90%">
+        <div class="card-body">
+          <div id="chart3"></div>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 90%">
+        <div class="card-body">
+          <div id="chart4"></div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- plotly CDN -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script  type="text/javascript">
+    var graph1 = {{ sales_graph | safe}};
+    Plotly.plot("chart1", graph1,{});
+
+    var graph2 = {{ best_performing_product | safe}};
+    Plotly.plot("chart2", graph2,{});
+
+    var graph3 = {{ most_product_in_stock | safe}};
+    Plotly.plot("chart3", graph3,{});
+
+    var graph4 = {{ best_performing_product_per_product | safe}};
+    Plotly.plot("chart4", graph4,{});
+</script>
+{% endblock %}

@@ -36,6 +36,9 @@
               {% if request.user.is_authenticated %}
                 <a class="nav-link" aria-current="page" href="{% url 'inventorylist' %}">Inventory</a>
                 <a class="nav-link" aria-current="page" href="{% url 'product_add' %}">Add Inventory</a>
+                <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}"><i class="fas fa-chart-line"> Dashboard</i></a>
+                <a class="nav-link" aria-current="page" href="{% url 'admin:index' %}"><i class="fas fa-users-cog"> Admin</i></a>
+                <a class="nav-link pull-right" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt">Logout</i></a>
               {% endif %}
             </div>
           </div>
